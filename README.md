@@ -1,4 +1,4 @@
-vim
+Vim
 ===
 
 Mijn vim respository.
@@ -10,7 +10,7 @@ Voer volgende stappen uit:
 
 cd 
 
-git clone git@github.com:dirk2011/vim.git ~/.vim
+git clone https://github.com/dirk2011/vim.git
 
 cd .vim
 
