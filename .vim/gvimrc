@@ -1,0 +1,7 @@
+
+" windows grootte en positie
+" winpos 50 50
+set lines=55
+set columns=160
+
+
