@@ -1,14 +1,20 @@
-" default instellingen voor vim
+" ******************************************************************************
+" file: vimrc
+" desc: vim configuratie
+" date: 2016-04
+" auth: dpa
+" ******************************************************************************
+
+" plugins laden
+execute pathogen#infect()
 
 syntax on                         " syntax highlighing
 filetype on                       " try to detect filetypes
-filetype plugin indent on         " enable loading indent file for
 
 set number                        " regelnummering aan
 syntax on                         " set syntax on
 set ic                            " case insensitive search
 set hls                           " highlight search
-color blue                        " colors
 
 set ruler                         " toon regelnummer
 set scrolloff=4                   " toon altijd boven, onder regels
@@ -23,13 +29,28 @@ set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
 set autoindent    " align the new line indent with the previous line
 
+filetype plugin indent on         " enable loading indent file for
 set showmatch                     " show the matching part of the pair for [] {} and ()
+color blue                        " colors
 
-execute pathogen#infect()
+
+" *** syntastic instellingen ***
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height=5      " toon max regels met meldingen
+
 
 " NERDTree, file browser
 let NERDTreeShowHidden=1          " toon hidden files en directories
 let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeQuitOnOpen=1          " sluit nerdtree nadat bestand gekozen is
+let NERDTreeShowBookmarks = 1     " toon bookmarks
 map <F3> :NERDTreeToggle<CR>      " map NERDTree met F3
 
 
@@ -47,3 +68,4 @@ colorscheme blackboard
 
 
 " eof 
+"

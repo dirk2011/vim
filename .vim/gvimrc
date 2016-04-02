@@ -1,7 +1,14 @@
+" ******************************************************************************
+" file: gvimrc
+" desc: gvim configuratie
+" date: 2016-04
+" auth: dpa
+" ******************************************************************************
 
 " windows grootte en positie
-" winpos 50 50
+set winpos 14 50
 set lines=55
 set columns=160
 
-
+" eof
+"
