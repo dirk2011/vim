@@ -67,5 +67,12 @@ let Tlist_File_Fold_Auto_Close = 1
 colorscheme blackboard
 
 
+" ga naar vorige positie in het bestand
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
+
 " eof 
 "
