@@ -8,11 +8,13 @@ set ic                            " case insensitive search
 set hls                           " highlight search
 
 set ruler                         " toon regelnummer
-set scrolloff=4                   " toon altijd boven, onder regels
+set scrolloff=10                  " toon altijd boven, onder regels
 set cursorline                    " toon regelcursor
 
+set textwidth=119                 " lines longer than 79 columns will be broken
+set colorcolumn=110,129           " kleur deze kolommen                                                             
+
 " veel tabinstellingen, ze lijken niet allemaal nodig, werkt nu goed in python scripts
-set textwidth=119 " lines longer than 79 columns will be broken
 " set tabstop=4     " a hard TAB displays as 4 columns
 set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
 set expandtab     " insert spaces when hitting TABs
@@ -25,7 +27,7 @@ set showmatch                     " show the matching part of the pair for [] {}
 
 " python keys
 nnoremap <silent> <F5> :!clear;python %<CR>
-nnoremap <silent> <F9> :!clear;python -i %<CR>
+nnoremap <silent> <F9> :!clear;idle %<CR>
 " nnoremap <silent> <F9> :!clear;python -m pdb %<CR>
 
 " 'za' to open and close a fold
