@@ -15,6 +15,7 @@ set number                        " regelnummering aan
 syntax on                         " set syntax on
 set ic                            " case insensitive search
 set hls                           " highlight search
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅    " weergave spaties op einde regel etc
 
 set ruler                         " toon regelnummer
 set scrolloff=4                   " toon altijd boven, onder regels
