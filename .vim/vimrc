@@ -69,11 +69,14 @@ map <F11> :mksession! ~/vim_session <cr> " Quick write session with
 map <F12> :source ~/vim_session <cr>     " And load session with
 
 
-" 201604, mapping voor Tagbar
+" mapping voor Tagbar, 201604
 nmap <F8> :TagbarToggle<CR>
 
 
-" color blue                        " colors 
+" configuratie vim-airline, 201604
+set laststatus=2
+
+" color blue                        " colors
 colorscheme blackboard
 
 
