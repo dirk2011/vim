@@ -1,26 +1,16 @@
-Vim
-===
+# Vim configuratie
 
-Mijn vim respository.
+Vim configuratie van Dirk.
 
-
-gebruik
--------
-Voer volgende stappen uit:
+# Installeren
 
 ```bash
+# ga naar de home directory
 cd 
-
-git clone https://github.com/dirk2011/vim.git vim-dirk
-```
-Verplaats map .vim in de folder vim-dirk naar de homedirectory.
-
-Maak de volgende koppelingen aan.
-```bash
-cd .vim
-
+# download vim configuratie
+git clone https://github.com/dirk2011/vim.git .vim
+# Maak de volgende koppelingen aan.
 ln -s ~/.vim/vimrc ~/.vimrc
-
 ln -s ~/.vim/gvimrc ~/.gvimrc
 ```
 
