@@ -32,7 +32,21 @@ nnoremap <silent> <F9> :!clear;idle %<CR>
 
 " 'za' to open and close a fold
 set foldmethod=indent
-set foldlevel=9
+set foldlevel=1
+"set foldignore=#
+
+"function MarkdownFoldsEigen()
+"    let thisline = getline(v:lnum)
+"    if match(thisline, '^\s*###') >= 0
+"        return ">2"
+"    elseif match(thisline, '^\s*##') >= 0
+"        return ">1"
+"    else
+"        return "="
+"    endif
+"endfunction
+"set foldmethod=expr
+"set foldexpr=MarkdownFoldsEigen()
 
 " eof
-"
+

@@ -1,8 +1,0 @@
-
-website met vim plugins
-http://vimawesome.com/plugin/vim-airline
-
-- installeren vim-airline, 2016-04
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-
-

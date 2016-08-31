@@ -49,7 +49,7 @@ let g:syntastic_loc_list_height=5      " toon max regels met meldingen
 
 " NERDTree, file browser
 let NERDTreeShowHidden=1          " toon hidden files en directories
-let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.txt']
 let NERDTreeQuitOnOpen=1          " sluit nerdtree nadat bestand gekozen is
 let NERDTreeShowBookmarks = 1     " toon bookmarks
 map <F3> :NERDTreeToggle<CR>      " map NERDTree met F3
@@ -71,6 +71,7 @@ map <F12> :source ~/vim_session <cr>     " And load session with
 
 " mapping voor Tagbar, 201604
 nmap <F8> :TagbarToggle<CR>
+" nmap <S-F8> :TagbarOpen fj<CR>
 
 
 " configuratie vim-airline, 201604
@@ -79,6 +80,15 @@ set laststatus=2
 " color blue                        " colors
 colorscheme blackboard
 
+" 2016-07, markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+" afwijkende config voor markdown
+autocmd bufreadpre *.md setlocal textwidth=80
+
+let g:tlist_markdown_settings = 'markdown;h:Headlins'
+
 
 " ga naar laatste positie in het bestand
 if has("autocmd")
@@ -86,7 +96,9 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+autocmd FileType markdown setlocal foldmethod=syntax
+autocmd FileType markdown setlocal spell
+autocmd FileType markdown setlocal spelllang=nl
 
 " eof 
-
 
