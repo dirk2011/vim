@@ -34,3 +34,7 @@ In de home directory `ctags` configureren voor MarkDown. Maak het bestand
 --regex-markdown=/^#######[ \t]+(.*)/-            \1/h,heading7/
 ```
 
+Met dank aan Bram Moolenaar voor Vim, en heel veel anderen voor de plugins.
+
+* * *
+
